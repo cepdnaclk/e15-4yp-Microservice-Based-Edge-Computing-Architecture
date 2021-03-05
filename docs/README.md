@@ -3,9 +3,9 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: e15-4yp-Microservice-Based-Edge-Computing-Architecture
+repository-name: eYY-4yp-project-template
 title:
-Microservice Based Edge Computing Architecture
+---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
@@ -13,14 +13,15 @@ Microservice Based Edge Computing Architecture
 
 #### Team
 
-- E/15/048, Gayal Laksara, [email](mailto:Laksaragayal1996@email.com)
+- eNumber, Name, [email](mailto:name@email.com)
 - eNumber, Name, [email](mailto:name@email.com)
 - eNumber, Name, [email](mailto:name@email.com)
 
 #### Supervisors
 
-- Dr.Upul Jayasinghe, [email](mailto:upuljm@eng.pdn.ac.lk)
-- Dr. Isuru Nawinne, [email](mailto:isurunawinne@eng.pdn.ac.lk)
+- Name, [email](mailto:name@eng.pdn.ac.lk)
+- Name, [email](mailto:name@eng.pdn.ac.lk)
+
 
 #### Table of content
 
