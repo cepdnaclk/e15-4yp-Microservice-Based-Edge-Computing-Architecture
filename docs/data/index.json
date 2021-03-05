@@ -7,20 +7,16 @@
          "eNumber":"E/15/048",
       },
       {
-         "name":"Team Member Name 2",
-         "email":"email@eng.pdn.ac.lk",
-         "eNumber":"E/yy/xxx",
-         "github_profile":"#",
-         "linkedin_profile":"#",
-         "researchgate_profile":"#"
+         "name":"Sewwandi Nisansala",
+         "email":"e15243@eng.pdn.ac.lk",
+         "eNumber":"E/15/243"
+     
       },
       {
-         "name":"Team Member Name 3",
-         "email":"email@eng.pdn.ac.lk",
-         "eNumber":"E/yy/xxx",
-         "github_profile":"#",
-         "linkedin_profile":"#",
-         "researchgate_profile":"#"
+         "name":"Sonali Prasadika",
+         "email":"e15271@eng.pdn.ac.lk",
+         "eNumber":"E/15/271"
+      
       }
    ],
    "supervisors":[
