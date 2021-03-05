@@ -46,11 +46,11 @@ With technological advancement, the adoption of advanced Internet of Things (IoT
 
 ## Methodology
 
-Design the Algorithm with Neural Network
+#### Design the Algorithm with Neural Network
 
 The main purpose of the AI algorithm of the project is to create a neural network from scratch in Python, which is capable of solving multi-class classification problems and can be distributed over the three-level architecture ROOF, Fog and Cloud. Some parameters of the algorithm should be transferred between each layer, then a certain model is not suitable for this case since the model can not pass through APIs from one layer to another layer. Therefore weight matrices are considered as parameters that are transferred between each layer. Softmax and cross-entropy functions are used as activation function and loss functions for creating the neural networks for multi-class classification. The cross-entropy cost function is used for optimizing the cost with softmax activation function at the output layer. There are two algorithms in our project one for predicting the vehicle’s speed and another for predicting air condition state in the vehicle. 
 
-Proposed Architecture
+#### Proposed Architecture
 
 For developing this microservice-based edge computing architecture, our proposal is to use a three-level hierarchical system, Namely as edge, fog, and cloud. On each level to some extend the processing is happening and each level has AI-based microservices for doing specific tasks. The microservices we have mainly used
 are Processing Microservice, AC Model Training Microservice, Speed Model Training Microservice, Confusion Matrix Microservice, Classification Report Microservice and Accuracy Microservice. In our hierarchy, except AC Model Training Microservice and Speed Model Training Microservice, all the other microservices act as a shared resource to achieve their goals.
