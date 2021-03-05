@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bf260df2-eaf7-4343-94dd-02df01989eb7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Fog Microserivces/services/fog_performance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Fog Microserivces/services/fog_performance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rasp1/ac_control_model_train_microservice_rasp1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rasp1/ac_control_model_train_microservice_rasp1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/ac_control_model_train_microservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/ac_control_model_train_microservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/accuracy_microservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/accuracy_microservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/classification_report_microservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/classification_report_microservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/confusion_matrix_microservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/confusion_matrix_microservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/processing_microservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/processing_microservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/raspberry_pi_performance.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/raspberry_pi_performance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/speed_model_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Roof Microservices/Without Libraries/services/speed_model_train.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1ohjNFg7968N112MzamKNacvvOL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf260df2-eaf7-4343-94dd-02df01989eb7" name="Default Changelist" comment="" />
+      <created>1613745677057</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613745677057</updated>
+    </task>
+    <servers />
+  </component>
+</project>
