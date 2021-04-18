@@ -102,7 +102,6 @@ time_speed_get_cloud_accuracy = 0
 time_speed_model_train = 0
 total = 0
 
-
 input_nodes = 5
 hidden_nodes = 8
 output_labels = 6
@@ -119,7 +118,6 @@ def write_to_csv(fileName, data):
 
 
 @app.route('/speed/predict', methods=['GET'])
-# @cache.cached(timeout=300)
 def predict_data():
     global time_speed_predict
     start_time = time.time()
@@ -133,7 +131,6 @@ def predict_data():
 
 
 @app.route('/speed/output', methods=['GET'])
-# @cache.cached(timeout=300)
 def output_data():
     global time_speed_output
     start_time = time.time()
@@ -147,7 +144,6 @@ def output_data():
 
 
 @app.route('/cloud/wh', methods=['GET'])
-# @cache.cached(timeout=300)
 def wh_data():
     global wh
     global time_speed_get_fog_wh
@@ -163,7 +159,6 @@ def wh_data():
 
 
 @app.route('/cloud/bh', methods=['GET'])
-# @cache.cached(timeout=300)
 def bh_data():
     global bh
     global time_speed_get_fog_bh
@@ -179,7 +174,6 @@ def bh_data():
 
 
 @app.route('/cloud/wo', methods=['GET'])
-# @cache.cached(timeout=300)
 def wo_data():
     global wo
     global time_speed_get_fog_wo
@@ -195,7 +189,6 @@ def wo_data():
 
 
 @app.route('/cloud/bo', methods=['GET'])
-# @cache.cached(timeout=300)
 def bo_data():
     global bo
     global time_speed_get_fog_bo
@@ -383,7 +376,6 @@ def output():
 
 
 @app.route('/roof/speed/time', methods=['GET'])
-# @cache.cached(timeout=300)
 def speed_time():
     global total
     global time_speed_predict
@@ -403,7 +395,6 @@ def speed_time():
 
 model_train_automated = RepeatedTimer(90, model_train)
 time_automated = RepeatedTimer(1, speed_time)
-
 
 if __name__ == '__main__':
     app.run(port=5201, host='0.0.0.0', debug=True)

@@ -49,14 +49,7 @@ class RepeatedTimer(object):
         self.is_running = False
 
 
-# config = {
-#     "DEBUG": True,  # some Flask specific configs
-#     "CACHE_TYPE": "simple",  # Flask-Caching related configs
-#     "CACHE_DEFAULT_TIMEOUT": 300
-# }
-
 app = Flask(__name__)
-
 
 time_get_fog_speed_data = 0
 time_get_fog_driver_rush_data = 0
@@ -87,10 +80,6 @@ time_testbed_window_opening_data = 0
 time_function_ac_control_train_split = 0
 time_function_speed_train_split = 0
 total = 0
-
-
-# app.config.from_mapping(config)
-# cache = Cache(app)
 
 air_condition_data_array = []
 passenger_count_data_array = []
@@ -123,7 +112,6 @@ def write_to_csv(fileName, data):
 # Speed REST Apis
 
 @app.route('/speed/input', methods=['GET'])
-# @cache.cached(timeout=300)
 def speed_input_list():
     global speed_input
     global time_get_speed_input
@@ -138,7 +126,6 @@ def speed_input_list():
 
 
 @app.route('/speed/x_train', methods=['GET'])
-# @cache.cached(timeout=300)
 def speed_x_train():
     global speed_x_train_data
     global time_get_speed_x_train
@@ -154,7 +141,6 @@ def speed_x_train():
 
 
 @app.route('/speed/x_test', methods=['GET'])
-# @cache.cached(timeout=300)
 def speed_x_test():
     global speed_x_test_data
     global time_get_speed_x_test
@@ -169,7 +155,6 @@ def speed_x_test():
 
 
 @app.route('/speed/y_test', methods=['GET'])
-# @cache.cached(timeout=300)
 def speed_y_test():
     global speed_y_test_data
     global time_get_speed_y_test
@@ -184,7 +169,6 @@ def speed_y_test():
 
 
 @app.route('/speed/y_train', methods=['GET'])
-# @cache.cached(timeout=300)
 def speed_y_train():
     global speed_y_train_data
     global time_get_speed_y_train
@@ -201,7 +185,6 @@ def speed_y_train():
 # AC REST Apis
 
 @app.route('/ac_control/input', methods=['GET'])
-# @cache.cached(timeout=300)
 def ac_control_input_list():
     global ac_input
     global time_get_ac_control_input
@@ -217,7 +200,6 @@ def ac_control_input_list():
 
 
 @app.route('/ac_control/x_train', methods=['GET'])
-# @cache.cached(timeout=300)
 def ac_control_x_train():
     global ac_x_train
     global time_get_ac_control_x_train
@@ -233,7 +215,6 @@ def ac_control_x_train():
 
 
 @app.route('/ac_control/x_test', methods=['GET'])
-# @cache.cached(timeout=300)
 def ac_control_x_test():
     global ac_x_test
     global time_get_ac_control_x_test
@@ -249,7 +230,6 @@ def ac_control_x_test():
 
 
 @app.route('/ac_control/y_test', methods=['GET'])
-# @cache.cached(timeout=300)
 def ac_control_y_test():
     global ac_y_test
     global time_get_ac_control_y_test
@@ -265,7 +245,6 @@ def ac_control_y_test():
 
 
 @app.route('/ac_control/y_train', methods=['GET'])
-# @cache.cached(timeout=300)
 def ac_control_y_train():
     global ac_y_train
     global time_get_ac_control_y_train
@@ -402,6 +381,7 @@ def get_performance_data_fog():
         return "Service unavailable"
     return performance_data
 
+
 # AC Train Split
 
 
@@ -491,7 +471,6 @@ def get_performance_fog():
 
 
 @app.route('/fog/processing/time', methods=['GET'])
-# @cache.cached(timeout=300)
 def processing_time():
     global total
     global time_get_fog_speed_data

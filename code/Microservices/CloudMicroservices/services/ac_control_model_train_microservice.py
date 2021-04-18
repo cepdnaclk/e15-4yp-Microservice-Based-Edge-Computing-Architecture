@@ -68,19 +68,10 @@ def predict(wh, bh, wo, bo, X_test):
     return ao
 
 
-# config = {
-#     "DEBUG": True,  # some Flask specific configs
-#     "CACHE_TYPE": "simple",  # Flask-Caching related configs
-#     "CACHE_DEFAULT_TIMEOUT": 300
-# }
-
 app = Flask(__name__)
 
-# app.config.from_mapping(config)
-# cache = Cache(app)
 
 y_predict_array = []
-
 
 time_ac_control_predict = 0
 time_ac_control_output = 0
@@ -114,7 +105,6 @@ wo = np.random.rand(hidden_nodes, output_labels)
 bo = np.random.randn(output_labels)
 
 
-
 def write_to_csv(fileName, data):
     with open(fileName, 'a', newline='') as file:
         writer = csv.writer(file)
@@ -122,7 +112,6 @@ def write_to_csv(fileName, data):
 
 
 @app.route('/ac_control/predict', methods=['GET'])
-# @cache.cached(timeout=300)
 def predict_data():
     global time_ac_control_predict
     start_time = time.time()
@@ -131,12 +120,11 @@ def predict_data():
     encodedNumpyData = json.dumps(numpyData, cls=NumpyArrayEncoder)  # use dump() to write array into file
     time_ac_control_predict = time.time() - start_time
     print("---predict_data %s seconds ---" % (time.time() - start_time))
-    write_to_csv('time_ac_control_predict.csv',time_ac_control_predict)
+    write_to_csv('time_ac_control_predict.csv', time_ac_control_predict)
     return encodedNumpyData
 
 
 @app.route('/ac_control/output', methods=['GET'])
-# @cache.cached(timeout=300)
 def output_data():
     global time_ac_control_output
     start_time = time.time()
@@ -150,7 +138,6 @@ def output_data():
 
 
 @app.route('/cloud/wh', methods=['GET'])
-# @cache.cached(timeout=300)
 def wh_data():
     global wh
     global time_ac_control_get_fog_wh
@@ -166,7 +153,6 @@ def wh_data():
 
 
 @app.route('/cloud/bh', methods=['GET'])
-# @cache.cached(timeout=300)
 def bh_data():
     global bh
     global time_ac_control_get_fog_bh
@@ -182,7 +168,6 @@ def bh_data():
 
 
 @app.route('/cloud/wo', methods=['GET'])
-# @cache.cached(timeout=300)
 def wo_data():
     global wo
     global time_ac_control_get_cloud_wo
@@ -198,7 +183,6 @@ def wo_data():
 
 
 @app.route('/cloud/bo', methods=['GET'])
-# @cache.cached(timeout=300)
 def bo_data():
     global bo
     global time_ac_control_get_cloud_bo
@@ -374,7 +358,6 @@ def output():
 
 
 @app.route('/roof/ac_control/time', methods=['GET'])
-# @cache.cached(timeout=300)
 def ac_time():
     global total
     global time_ac_control_predict
@@ -393,7 +376,6 @@ def ac_time():
 
 model_train_automated = RepeatedTimer(90, model_train)
 time_automated = RepeatedTimer(1, ac_time)
-
 
 if __name__ == '__main__':
     app.run(port=5003, host='0.0.0.0', debug=True)

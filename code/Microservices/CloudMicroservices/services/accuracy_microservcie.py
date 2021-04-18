@@ -165,7 +165,6 @@ def speed_accuracy_calculator():
 
 
 @app.route('/roof/accuracy/time', methods=['GET'])
-# @cache.cached(timeout=300)
 def accuracy_time():
     global total
     global time_ac_control_accuracy
