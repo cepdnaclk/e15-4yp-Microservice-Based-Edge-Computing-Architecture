@@ -1,43 +1,32 @@
 {
-   "title":"This is the title of the project",
+   "title":"Miceoservice Based Edge Computing Architecture",
    "team":[
       {
-         "name":"Team Member Name 1",
-         "email":"email@eng.pdn.ac.lk",
-         "eNumber":"E/yy/xxx",
-         "github_profile":"#",
-         "linkedin_profile":"#",
-         "researchgate_profile":"#"
+         "name":"Gayal Laksara",
+         "email":"e15048@eng.pdn.ac.lk",
+         "eNumber":"E/15/048",
       },
       {
-         "name":"Team Member Name 2",
-         "email":"email@eng.pdn.ac.lk",
-         "eNumber":"E/yy/xxx",
-         "github_profile":"#",
-         "linkedin_profile":"#",
-         "researchgate_profile":"#"
+         "name":"Sewwandi Nisansala",
+         "email":"e15243@eng.pdn.ac.lk",
+         "eNumber":"E/15/243"
+     
       },
       {
-         "name":"Team Member Name 3",
-         "email":"email@eng.pdn.ac.lk",
-         "eNumber":"E/yy/xxx",
-         "github_profile":"#",
-         "linkedin_profile":"#",
-         "researchgate_profile":"#"
+         "name":"Sonali Prasadika",
+         "email":"e15271@eng.pdn.ac.lk",
+         "eNumber":"E/15/271"
+      
       }
    ],
    "supervisors":[
       {
-         "name":"Dr. Supervisor 1",
-         "email":"email@eng.pdn.ac.lk",
-         "linkedin_profile":"",
-         "researchgate_profile":""
+         "name":"Dr.Upul Jayasinghe",
+         "email":"upuljml@eng.pdn.ac.lk",
       },
       {
-         "name":"Dr. Supervisor 2",
-         "email":"email@eng.pdn.ac.lk",
-         "linkedin_profile":"",
-         "researchgate_profile":""
+         "name":"Dr. Isuru Nawinne",
+         "email":"isurunawinne@eng.pdn.ac.lk",
       }
    ],
    "publications":[
