@@ -80,6 +80,40 @@ We have used the Google Cloud Platform to provide cloud computing services at th
 Dynamic offloading improves the performance of ROOF architecture since it has lower computational power. In [20], the authors proposed task-centric and data-centric algorithms to analyze the threshold when the dynamic offload is happening. In our case, since the data is sent to the upper levels (FOG and Cloud), the data are not stored at the ROOF. Therefore the data-centric method is not suitable for this case. Here the task-centric algorithm is considered to do the offloading. Since the Raspberry Pis have less computation the overload can happen and it gets too much time to process data
 even the processing is delegated horizontally on several nodes. The tasks which get larger processing times in the nodes are offloaded to the least overloading nodes. The utility function for calculating offloading algorithm is as follows.
 
+| Meaning                        | Symbol              |
+| -------------------------------|:-------------------:|
+| Max device factor              | α<sub>a</sub>       | 
+| Min device factor              | α<sub>b</sub>       |
+| Number of connected edge nodes | E<sub>n</sub>       |
+| Threshold                      | T                   |
+| Time per offload service       | β<sub>i</sub>       |
+| Total time                     | β<sub>t</sub>       |
+
+
+   α<sub>a</sub> = 1/(E<sub>n</sub>)<br/>
+   α<sub>a</sub> = 1/(E<sub>n</sub> + 1)<br/>
+   T = (β<sub>i</sub> / β<sub>t</sub>) <br>
+  
+  Offload occurs when, <br>
+    T > α<sub>a</sub> 
+ 
+ 
+ ### Microservices Implementation
+ 
+ For developing this microservice-based edge computing architecture, we propose to use a three-level hierarchical system, Namely as ROOF, fog, and cloud. On each level to some extend the processing is happening and each level has AIbased microservices for doing specific tasks. Microservices we mainly used processing microservice, AC model training microservice, speed model training microservice, confusion matrix microservice, classification report microservice and accuracy microservice
+In our hierarchy, except AC Model Training Microservice and Speed Model Training Microservice, all the other microservices act as a shared resource to achieve their goals. The goal of the processing microservice is to get data from the testbed (for ROOF) and for other levels, lower-level processing
+microservice sent data to upper-level processing microservice. Further, the functionalities in the processing are splitting data to testing and training, and assigning separate APIs to respective results (e,g-: AC model x training data, Speed model x training data, etc). Speed model train microservice and AC model training microservice both are responsible for training the model for both the Speed and AC services. But all the accuracy, confusion matrix, and classification report microservices are responsible for providing accuracy, a classification report, and also a confusion matrix, and those results are used to validate the results. Here we have implemented a policy in a model train, which is it requests the accuracies from all the upper layers and if an upper layer has greater accuracy compared to its current accuracy, then the weight matrices of that corresponding upper layer are requested and replaced in the model. As a result of this, since the lower level has less computation and storage powers compared to its upper layer, there is a possibility that
+the upper layer may have achieved greater accuracy. So we can achieve the same accuracy level for lower layers by sharing the model in this way. The ROOF model can be seen in figure 1
+The whole hierarchy can be seen in Figure 2. All the functionalities happening in ROOF happens in fog and cloud. Additionally, we have a separate microservice called Global Accuracy at both fog and cloud levels. Global accuracy microservice is the one that responds for keeping the track of accuracy and weight matrices of near vehicles. It requests the accuracy from all the nearby vehicles and if a vehicle has higher accuracy, we update the global accuracy microservice with that vehicle’s accuracy and weight matrix data. A policy in this microservice is, at the start, we have seen with the
+lesser number of datasets we get about 100% accuracy. But this accuracy is not valid because it can not predict the correct outputs with the changing natures. The policy is, to update the global accuracy, the corresponding vehicle must have generated more than the size of 1000 data sets.
+As seen in figure 3, cloud level has some additional functionalities compared to its lower levels. Since the cloud is the topmost layer, all the input data coming from the testbed is saved in the cloud firestore for archiving reasons. The further initial plan is to use the cloud database service to act as a global accuracy saver, but since firestore does not allow us to save 2-D matrices we fall back to the strategy we used in the fog here. Further, we have developed a mobile app that is interconnected with a special service provided with the use of cloud functionalities. The service is to give a fuel consumption assumption for the user by combining speed and ac control data. The mobile app is for the user and the user can give the current location and destination with the available amount of fuel. Those data sent to a service running in the cloud which calculates the rough assumption of fuel consumption with the speed and ac data at cloud level, and the result is sent back
+to the mobile app
+
+### lementation of the NN Algorithm
+
+As mentioned above, in the methodology section, the algorithms are divided into two sub-phases as the feed-forward phase and the backpropagation phase.
+ 
+
 # Results and Analysis
 
 # Conclusion
