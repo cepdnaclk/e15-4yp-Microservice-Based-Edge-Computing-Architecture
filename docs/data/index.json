@@ -4,7 +4,7 @@
       {
          "name":"Gayal Laksara",
          "email":"e15048@eng.pdn.ac.lk",
-         "eNumber":"E/15/048",
+         "eNumber":"E/15/048"
       },
       {
          "name":"Sewwandi Nisansala",
@@ -20,11 +20,11 @@
    "supervisors":[
       {
          "name":"Dr.Upul Jayasinghe",
-         "email":"upuljml@eng.pdn.ac.lk",
+         "email":"upuljml@eng.pdn.ac.lk"
       },
       {
          "name":"Dr. Isuru Nawinne",
-         "email":"isurunawinne@eng.pdn.ac.lk",
+         "email":"isurunawinne@eng.pdn.ac.lk"
       }
    ],
    "publications":[
